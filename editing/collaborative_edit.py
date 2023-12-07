@@ -91,6 +91,7 @@ def parse_args():
         help=
         "whether display the intermediate DDIM outputs (x_t and pred_x_0) and save them in the output folder",
     )
+    parser.add_argument("--alpha", type=float, default=0.8)
 
     args = parser.parse_args()
     return args
@@ -136,7 +137,7 @@ def main():
 
     seed = args.seed
 
-    for alpha_idx, alpha in enumerate([0.8, 1]):
+    for alpha_idx, alpha in enumerate([args.alpha]):
         torch.cuda.empty_cache()
 
         print(f'alpha={alpha}')
