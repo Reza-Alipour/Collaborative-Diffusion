@@ -111,7 +111,7 @@ def sample_model(model,
 
 def load_img(path, target_size=256):
     """Load an image, resize and output -1..1"""
-    image = Image.open(path).convert("RGB")
+    image = Image.open(path).resize((256,256)).convert("RGB")
 
     tform = transforms.Compose([
         # transforms.Resize(target_size),
