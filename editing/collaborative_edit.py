@@ -137,6 +137,7 @@ def main():
     seed = args.seed
 
     for alpha_idx, alpha in enumerate([0.8, 1]):
+        torch.cuda.empty_cache()
 
         print(f'alpha={alpha}')
 
