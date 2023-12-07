@@ -161,7 +161,7 @@ if __name__ == '__main__':
     sampler = DDIMSampler(model)
 
     # prepare directories
-    save_dir = os.path.join(args.save_folder, image_name, str(prompt))
+    save_dir = os.path.join(args.save_folder, image_name)
     os.makedirs(save_dir, exist_ok=True)
     print(
         f'================================================================================'
