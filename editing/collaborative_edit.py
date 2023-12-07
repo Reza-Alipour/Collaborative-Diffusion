@@ -136,10 +136,7 @@ def main():
 
     seed = args.seed
 
-    for alpha_idx, alpha in enumerate([
-            0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1, 1.125, 1.25,
-            1.375, 1.5, 1.625, 1.75, 1.875, 2.0, 2.5
-    ]):
+    for alpha_idx, alpha in enumerate([0.8, 1]):
 
         print(f'alpha={alpha}')
 
